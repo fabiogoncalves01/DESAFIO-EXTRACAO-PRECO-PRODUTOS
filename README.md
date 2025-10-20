@@ -81,3 +81,30 @@ ambiente `SERPAPI_KEY` (por exemplo, em um arquivo `.env`) para que a
 automação busque dados reais do Google Shopping. Em ambientes sem
 conexão ou sem chave, o script utilizará os dados simulados do
 `scraper.py`.
+## Por que Requests, Pandas e SerpApi?
+
+Ao escolher as bibliotecas desta automação, buscamos ferramentas simples
+e robustas que facilitassem a escrita de um código resiliente. A
+biblioteca **Requests** é usada para baixar as imagens e consumir
+APIs opcionais. Conforme a documentação oficial, Requests é “uma
+biblioteca HTTP elegante e simples, construída para seres humanos”【347928905114982†L8-L32】,
+oferecendo uma API intuitiva para enviar requisições sem a necessidade
+de lidar com detalhes de baixo nível. A simplicidade da API se
+traduz em código mais legível e fácil de manter.
+
+A gravação e leitura de dados são feitas com **Pandas**, que oferece
+uma interface rica para lidar com dados tabulares e exportá‑los para
+CSV com poucas linhas de código. Embora seja possível usar o módulo
+`csv` da biblioteca padrão, Pandas simplifica a conversão de tipos e a
+ordenação dos preços numéricos com métodos como `to_csv()` e
+`sort_values()`, resultando em um código conciso. Além disso, o módulo
+`python‑dotenv` é utilizado para ler variáveis de ambiente (como a
+chave da SerpApi) de um arquivo `.env`, evitando expor credenciais no
+código.
+
+A solução oferece suporte opcional à **SerpApi**, que realiza as
+requisições ao Google Shopping via API quando disponível. Em ambientes
+sem conexão ou sem chave válida, o `scraper.py` gera dados de
+exemplo, permitindo validar o fluxo da automação mesmo offline. Essa
+abordagem modulariza a dependência externa e garante que o desafio
+possa ser testado em qualquer ambiente.
