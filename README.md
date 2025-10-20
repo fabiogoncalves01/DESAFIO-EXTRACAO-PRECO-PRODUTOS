@@ -87,7 +87,7 @@ Ao escolher as bibliotecas desta automação, buscamos ferramentas simples
 e robustas que facilitassem a escrita de um código resiliente. A
 biblioteca **Requests** é usada para baixar as imagens e consumir
 APIs opcionais. Conforme a documentação oficial, Requests é “uma
-biblioteca HTTP elegante e simples, construída para seres humanos”【347928905114982†L8-L32】,
+biblioteca HTTP elegante e simples, construída para seres humanos”,
 oferecendo uma API intuitiva para enviar requisições sem a necessidade
 de lidar com detalhes de baixo nível. A simplicidade da API se
 traduz em código mais legível e fácil de manter.
